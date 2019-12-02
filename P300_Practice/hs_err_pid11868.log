@@ -1,0 +1,173 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 134217728 bytes for Failed to commit area from 0x0000000080c00000 to 0x0000000088c00000 of length 134217728.
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (t:/workspace/hotspot/src/os/windows/vm/os_windows.cpp:3357), pid=11868, tid=11692
+#
+# JRE version:  (9.0+11) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (9.0.4+11, mixed mode, tiered, compressed oops, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Dfile.encoding=UTF-8 cn.xy.test.test
+
+Host: Intel(R) Core(TM) i5-7400 CPU @ 3.00GHz, 4 cores, 7G,  Windows 7 , 64 bit Build 7601 (6.1.7601.24168)
+Time: Tue Oct 29 21:24:06 2019 ?D1¨²¡À¨º¡Á?¨º¡À?? elapsed time: 0 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000000000405000):  JavaThread "Unknown thread" [_thread_in_vm, id=11692, stack(0x00000000022e0000,0x00000000023e0000)]
+
+Stack: [0x00000000022e0000,0x00000000023e0000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x587068]
+V  [jvm.dll+0x69c25e]
+V  [jvm.dll+0x69d17a]
+V  [jvm.dll+0x69d7b3]
+V  [jvm.dll+0x21d198]
+V  [jvm.dll+0x584bb4]
+V  [jvm.dll+0x57a095]
+V  [jvm.dll+0x2cd67b]
+V  [jvm.dll+0x2cd5e3]
+V  [jvm.dll+0x2cd4b2]
+V  [jvm.dll+0x2cf4b3]
+V  [jvm.dll+0x3191e3]
+V  [jvm.dll+0x3198f6]
+V  [jvm.dll+0x3192e3]
+V  [jvm.dll+0x2adeb8]
+V  [jvm.dll+0x2af0e7]
+V  [jvm.dll+0x67b34d]
+V  [jvm.dll+0x67c70c]
+V  [jvm.dll+0x3269c9]
+V  [jvm.dll+0x66555e]
+V  [jvm.dll+0x391811]
+V  [jvm.dll+0x3937c1]
+C  [javaw.exe+0x3501]
+C  [javaw.exe+0xe25f]
+C  [javaw.exe+0xe406]
+C  [kernel32.dll+0x159cd]
+C  [ntdll.dll+0x5383d]
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x000000000041b800 GCTaskThread "GC Thread#0" [stack: 0x0000000018030000,0x0000000018130000] [id=11900]
+  0x000000000041d000 GCTaskThread "GC Thread#1" [stack: 0x00000000181a0000,0x00000000182a0000] [id=11916]
+  0x0000000000421000 GCTaskThread "GC Thread#2" [stack: 0x0000000018470000,0x0000000018570000] [id=11920]
+  0x0000000000422800 GCTaskThread "GC Thread#3" [stack: 0x00000000182b0000,0x00000000183b0000] [id=11924]
+  0x000000000046d000 ConcurrentGCThread "G1 Main Marker" [stack: 0x000000001e190000,0x000000001e290000] [id=11940]
+  0x000000000046e000 ConcurrentGCThread "G1 Marker#0" [stack: 0x000000001e450000,0x000000001e550000] [id=11960]
+  0x0000000000437000 ConcurrentGCThread "G1 Refine#0" [stack: 0x0000000018c20000,0x0000000018d20000] [id=11904]
+  0x0000000000436000 ConcurrentGCThread "G1 Refine#1" [stack: 0x0000000018d60000,0x0000000018e60000] [id=11892]
+  0x0000000000435800 ConcurrentGCThread "G1 Refine#2" [stack: 0x0000000018a80000,0x0000000018b80000] [id=11912]
+  0x0000000000434800 ConcurrentGCThread "G1 Refine#3" [stack: 0x0000000018980000,0x0000000018a80000] [id=11908]
+  0x000000000044b000 ConcurrentGCThread "G1 Young RemSet Sampling" [stack: 0x0000000019020000,0x0000000019120000] [id=11896]
+
+=>0x0000000000405000 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=11692, stack(0x00000000022e0000,0x00000000023e0000)]
+
+Threads with active compile tasks:
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x0000000000401f70] Heap_lock - owner thread: 0x0000000000405000
+
+Heap address: 0x0000000080c00000, size: 2036 MB, Compressed Oops mode: Non-zero based: 0x0000000080c00000
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x000000013f890000 - 0x000000013f8ce000 	D:\1.Soft\3.LearnSoft\02.JRE\bin\javaw.exe
+0x00000000772d0000 - 0x000000007746f000 	C:\Windows\SYSTEM32\ntdll.dll
+0x00000000771b0000 - 0x00000000772cf000 	C:\Windows\system32\kernel32.dll
+0x000007fefcf50000 - 0x000007fefcfba000 	C:\Windows\system32\KERNELBASE.dll
+0x000007fefe2a0000 - 0x000007fefe37b000 	C:\Windows\system32\ADVAPI32.dll
+0x000007feff4b0000 - 0x000007feff54f000 	C:\Windows\system32\msvcrt.dll
+0x000007fefd2d0000 - 0x000007fefd2ef000 	C:\Windows\SYSTEM32\sechost.dll
+0x000007feff2e0000 - 0x000007feff40d000 	C:\Windows\system32\RPCRT4.dll
+0x00000000770b0000 - 0x00000000771aa000 	C:\Windows\system32\USER32.dll
+0x000007feff550000 - 0x000007feff5b7000 	C:\Windows\system32\GDI32.dll
+0x000007fefd8b0000 - 0x000007fefd8be000 	C:\Windows\system32\LPK.dll
+0x000007fefdbc0000 - 0x000007fefdc8b000 	C:\Windows\system32\USP10.dll
+0x000007fefb6b0000 - 0x000007fefb8a4000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.18837_none_fa3b1e3d17594757\COMCTL32.dll
+0x000007fefdb40000 - 0x000007fefdbb1000 	C:\Windows\system32\SHLWAPI.dll
+0x000007fefbfd0000 - 0x000007fefbfdc000 	C:\Windows\system32\VERSION.dll
+0x000007fefe160000 - 0x000007fefe18e000 	C:\Windows\system32\IMM32.DLL
+0x000007fefe190000 - 0x000007fefe299000 	C:\Windows\system32\MSCTF.dll
+0x000007fef42c0000 - 0x000007fef43af000 	D:\1.Soft\3.LearnSoft\02.JRE\bin\msvcr120.dll
+0x000007fef4210000 - 0x000007fef42b6000 	D:\1.Soft\3.LearnSoft\02.JRE\bin\msvcp120.dll
+0x00000000610f0000 - 0x0000000061b15000 	D:\1.Soft\3.LearnSoft\02.JRE\bin\server\jvm.dll
+0x000007fef7050000 - 0x000007fef7059000 	C:\Windows\system32\WSOCK32.dll
+0x000007fefdc90000 - 0x000007fefdcdd000 	C:\Windows\system32\WS2_32.dll
+0x000007fefd8a0000 - 0x000007fefd8a8000 	C:\Windows\system32\NSI.dll
+0x000007fefa1a0000 - 0x000007fefa1db000 	C:\Windows\system32\WINMM.dll
+0x0000000077480000 - 0x0000000077487000 	C:\Windows\system32\PSAPI.DLL
+0x000007fef7060000 - 0x000007fef706f000 	D:\1.Soft\3.LearnSoft\02.JRE\bin\verify.dll
+0x000007fef5940000 - 0x000007fef5967000 	D:\1.Soft\3.LearnSoft\02.JRE\bin\java.dll
+0x000007fef5980000 - 0x000007fef5996000 	D:\1.Soft\3.LearnSoft\02.JRE\bin\zip.dll
+0x000007fef5970000 - 0x000007fef597a000 	D:\1.Soft\3.LearnSoft\02.JRE\bin\jimage.dll
+0x000007fef9510000 - 0x000007fef9635000 	C:\Windows\system32\dbghelp.dll
+
+VM Arguments:
+jvm_args: -Dfile.encoding=UTF-8 
+java_command: cn.xy.test.test
+java_class_path (initial): D:\1.Soft\3.LearnSoft\00.Workspace\12.EclipseSpace_JavaWeb\P300_Practice\build\classes;D:\1.Soft\3.LearnSoft\08.Tomcat\apache-tomcat-8.5.47-windows-x64\apache-tomcat-8.5.47\lib\annotations-api.jar;D:\1.Soft\3.LearnSoft\08.Tomcat\apache-tomcat-8.5.47-windows-x64\apache-tomcat-8.5.47\lib\catalina-ant.jar;D:\1.Soft\3.LearnSoft\08.Tomcat\apache-tomcat-8.5.47-windows-x64\apache-tomcat-8.5.47\lib\catalina-ha.jar;D:\1.Soft\3.LearnSoft\08.Tomcat\apache-tomcat-8.5.47-windows-x64\apache-tomcat-8.5.47\lib\catalina-storeconfig.jar;D:\1.Soft\3.LearnSoft\08.Tomcat\apache-tomcat-8.5.47-windows-x64\apache-tomcat-8.5.47\lib\catalina-tribes.jar;D:\1.Soft\3.LearnSoft\08.Tomcat\apache-tomcat-8.5.47-windows-x64\apache-tomcat-8.5.47\lib\catalina.jar;D:\1.Soft\3.LearnSoft\08.Tomcat\apache-tomcat-8.5.47-windows-x64\apache-tomcat-8.5.47\lib\ecj-4.6.3.jar;D:\1.Soft\3.LearnSoft\08.Tomcat\apache-tomcat-8.5.47-windows-x64\apache-tomcat-8.5.47\lib\el-api.jar;D:\1.Soft\3.LearnSoft\08.Tomcat\apache-tomcat-8.5.47-windows-x64\apache-tomcat-8.5.47\lib\jasper-el.jar;D:\1.Soft\3.LearnSoft\08.Tomcat\apache-tomcat-8.5.47-windows-x64\apache-tomcat-8.5.47\lib\jasper.jar;D:\1.Soft\3.LearnSoft\08.Tomcat\apache-tomcat-8.5.47-windows-x64\apache-tomcat-8.5.47\lib\jaspic-api.jar;D:\1.Soft\3.LearnSoft\08.Tomcat\apache-tomcat-8.5.47-windows-x64\apache-tomcat-8.5.47\lib\jsp-api.jar;D:\1.Soft\3.LearnSoft\08.Tomcat\apache-tomcat-8.5.47-windows-x64\apache-tomcat-8.5.47\lib\servlet-api.jar;D:\1.Soft\3.LearnSoft\08.Tomcat\apache-tomcat-8.5.47-windows-x64\apache-tomcat-8.5.47\lib\tomcat-api.jar;D:\1.Soft\3.LearnSoft\08.Tomcat\apache-tomcat-8.5.47-windows-x64\apache-tomcat-8.5.47\lib\tomcat-coyote.jar;D:\1.Soft\3.LearnSoft\08.Tomcat\apache-tomcat-8.5.47-windows-x64\apache-tomcat-8.5.47\lib\tomcat-dbcp.jar;D:\1.Soft\3.LearnSoft\08.Tomcat\apache-tomcat-8.5.47-windows-x64\apache-tomcat-8.5.47\lib\tomcat-i18n-de.jar;D:\1.Soft\3.LearnSoft\08.Tomcat\apache-tomcat-8.5.47-windows-x64\apache-tomcat-8.5
+Launcher Type: SUN_STANDARD
+
+Logging:
+Log output configuration:
+#0: stdout all=warning uptime,level,tags
+#1: stderr all=off uptime,level,tags
+
+Environment Variables:
+JAVA_HOME=D:\1.Soft\3.LearnSoft\01.JDK
+PATH=C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\1.Soft\3.LearnSoft\01.JDK\bin;D:\1.Soft\3.LearnSoft\01.JDK\jre\bin;D:\1.Soft\3.LearnSoft\06.Mysql\mysql-5.7.28-winx64\bin;
+USERNAME=Administrator
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 158 Stepping 9, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 7 , 64 bit Build 7601 (6.1.7601.24168)
+
+CPU:total 4 (initial active 4) (4 cores per cpu, 1 threads per core) family 6 model 158 stepping 9, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, 3dnowpref, lzcnt, tsc, tscinvbit, bmi1, bmi2, adx, fma
+
+Memory: 4k page, physical 8337476k(1624892k free), swap 8335600k(126980k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (9.0.4+11) for windows-amd64 JRE (9.0.4+11), built on Dec 20 2017 02:18:54 by "mach5one" with MS VC++ 12.0 (VS2013)
+
+END.
